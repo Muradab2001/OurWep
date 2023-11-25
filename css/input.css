@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Inter Bold';
+  font-weight: 700;
+  src: url('../fonts/Inter-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Medium';
+  font-weight: 500;
+  src: url('../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  font-weight: 400;
+  src: url('../fonts/Inter-Regular.ttf');
+}
+@font-face {
+  font-family: 'Inter Semibold';
+  font-weight: 600;
+  src: url('../fonts/Inter-SemiBold.ttf');
+}
+
+svg {
+  cursor: pointer;
+}
+
+.hoverFill:hover {
+  & > svg path {
+    @apply fill-lime;
+    @apply duration-300
+  }
+}
+
+
+.accordion {
+  @apply overflow-hidden duration-300
+}
+
+.accordion-top {
+  @apply flex justify-between items-center select-none;
+}
+
+.accordion-top h3 {
+  @apply font-interBold;
+}
+
+.accordion-bottom img {
+  @apply inline-block mr-2.5;
+}
+
+.accordion-bottom {
+  @apply invisible opacity-0 max-h-0 duration-300;
+  & > div {
+    @apply flex;
+  }
+}
+.accordion button {
+  @apply duration-300;
+}
+
+[data-type="bottom"]::-webkit-scrollbar {
+  display: none;
+}
+
+.shadow-okuCarusel {
+  background: linear-gradient(to left, #fff, transparent);
+  position: absolute;
+  width: 150px;
+  height: 100%;
+}
+
+[data-type="okuCar2"]::-webkit-scrollbar {
+  display: none;
+}
+
+.accordion.active .accordion-bottom {
+  @apply max-h-96 opacity-100 visible pt-8;
+}
+.accordion.active-m .accordion-bottom {
+  @apply max-h-[360px] opacity-100 visible;
+}
+.accordion.active-m .accordion-bottom {
+  @apply max-h-[360px] opacity-100 visible;
+}
+
+.accordion.active button {
+  @apply rotate-90;
+}
+.accordion.active-m img {
+  @apply rotate-90;
+}
+
+.card {
+  @apply cursor-pointer;
+}
+
+.accordion-container {
+  @apply overflow-y-auto h-[380px];
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.accordion-container::-webkit-scrollbar-track {
+  background-color: theme(yellow);
+}
+.accordion-container::-webkit-scrollbar-thumb {
+  /* background-color: theme(yellow-500); */
+  width: 4px;
+  height: 68px;
+}
+.accordion-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+
+.muraciet::-webkit-scrollbar,
+.muraciet::-webkit-scrollbar-thumb,
+.muraciet::-webkit-scrollbar-track { 
+    width: 8px;
+    border: none;
+    background: transparent;
+}
+
+.muraciet::-webkit-scrollbar-button,
+.muraciet::-webkit-scrollbar-track-piece,
+.muraciet::-webkit-scrollbar-corner,
+.muraciet::-webkit-resizer {
+    display: none;
+}
+
+.muraciet::-webkit-scrollbar-thumb {
+    background-color: #D4FE2E;
+}
+
+.muraciet::-webkit-scrollbar-track {
+    background-image: url("https://i.imgur.com/GvV1R30.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+}
